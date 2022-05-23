@@ -2,6 +2,7 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar.js';
 import CountFunction from './components/CountFunction/CountFunction.js';
+import ItemCount from './components/ItemCount/ItemCount';
 
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'; /* Solo para el desafio */
 
@@ -12,6 +13,7 @@ function App() {
         <NavBar />
         <CountFunction />
         <ItemListContainer greeting='Desafio Coder'/>
+        <ItemCount />
         {/*  
         <img src={logo} className="App-logo" alt="logo" />
         <p>
