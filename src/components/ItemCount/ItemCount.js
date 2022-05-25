@@ -1,21 +1,16 @@
 import { useState} from "react"
 
 
-const ItemCount = (props) => {
+const ItemCount = ({stock}) => {
 
-/*     const state = useState(0)
-    
-    const count = state[0]
-    const setCount = state[1] */ 
-
-    const [count, setCount] = useState(0) /* Es lo mismo que el codigo comentado de arriba */
+    const [count, setCount] = useState(1) /* Es lo mismo que el codigo comentado de arriba */
 
     const decrement = () => {
-        setCount(count - 1)
+       if (count > 1) setCount(count - 1)
     }
 
     const increment = () => {
-        setCount(count + 1)
+       if (count < stock) setCount(count + 1)
     }
 
     return (

@@ -1,7 +1,7 @@
 /* import logo from './logo.svg'; */
 import './App.css';
 import NavBar from './components/NavBar/NavBar.js';
-import CountFunction from './components/CountFunction/CountFunction.js';
+
 import ItemCount from './components/ItemCount/ItemCount';
 
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'; /* Solo para el desafio */
@@ -11,9 +11,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <NavBar />
-        <CountFunction />
+
         <ItemListContainer greeting='Desafio Coder'/>
-        <ItemCount />
+        <ItemCount stock={3}/>
         {/*  
         <img src={logo} className="App-logo" alt="logo" />
         <p>
