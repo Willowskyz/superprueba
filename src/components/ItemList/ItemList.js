@@ -1,12 +1,4 @@
-/* const ItemList = ({products}) => {
-    console.log(products)
-    return (
-        <h1>Listado</h1>
-    )
-}
 
-export default ItemList
- */
 import Item from '../Item/Item'
 
 const ItemList = ({products}) => {
