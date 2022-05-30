@@ -10,7 +10,6 @@ const ItemListContainer = ({greeting}) => {
             setProducts(response)
         })
     },[])
-    console.log('Probando antes de cargar')
 
     return (
         <div >
@@ -20,3 +19,4 @@ const ItemListContainer = ({greeting}) => {
     )
 }
 export default ItemListContainer
+
