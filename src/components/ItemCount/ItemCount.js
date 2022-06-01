@@ -1,4 +1,5 @@
 import { useState} from "react"
+import './ItemCount.css'
 
 
 const ItemCount = ({stock}) => {
@@ -14,11 +15,11 @@ const ItemCount = ({stock}) => {
     }
 
     return (
-        <div style={{display: 'flex'}}>
+       <div style={{display: 'flex'}}>
             <button onClick={decrement}>-</button>
             <h1>{count}</h1>
             <button onClick={increment}>+</button>
-        </div>
+        </div> 
     )
 }
 

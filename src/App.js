@@ -1,39 +1,25 @@
 /* import logo from './logo.svg'; */
 import './App.css';
 import NavBar from './components/NavBar/NavBar.js';
-
 import ItemCount from './components/ItemCount/ItemCount';
-
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'; /* Solo para el desafio */
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'; 
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
-
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <NavBar />
-      
-
-        {/*<ItemListContainer greeting='Desafio Coder'/>  */}
-        <ItemDetailContainer />
-        <ItemCount stock={3}/>
-        {/*  
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>*/}
-      </header>
+    <div className='App'>
+        <BrowserRouter>
+            <NavBar/>
+            <Routes>
+              <Route path='/' element ={<ItemListContainer greeting='Todos Los tipos de Cafe'/>} />
+              <Route path='/category/:categoryId' element ={<ItemListContainer greeting='Filtrado por categoria'/>} />
+             {/*  <Route path='*' element ={ <h1>Errocito</h1> } /> */}
+              <Route path='/detail/:productId' element ={<ItemDetailContainer/>  } /> 
+              
+            </Routes>
+        </BrowserRouter>
     </div>
   );
 }

@@ -1,10 +1,10 @@
 import './ItemDetail.css'
 
-const ItemDetail = ({title, img}) => {
+const ItemDetail = ({name, img}) => {
     return(
         <div>
             <h1>ItemDetail</h1>
-            <h2>{title}</h2>
+            <h2>{name}</h2>
             <img src={img} alt='nombre' /> 
         </div>
         
