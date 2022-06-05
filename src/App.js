@@ -4,7 +4,6 @@ import NavBar from './components/NavBar/NavBar.js';
 import ItemCount from './components/ItemCount/ItemCount';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'; 
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 const App = () => {

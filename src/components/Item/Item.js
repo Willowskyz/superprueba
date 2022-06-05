@@ -1,17 +1,31 @@
 import { Link } from 'react-router-dom'
+import './Item.css'
 
 const Item = ({id, name,price, categoria, img, stock, description }) => {
+    const handleClick = (e) => {
+        e.stopPropagation()
+        console.log('hice click en item')
+    }
+
     return (
-        <div>
-            <h1>{id}</h1>
-            <h2>{stock}</h2>
-           {/*  <button className="Option">Ver Detalle</button> */}
-            <Link className='Option' to={`/detail/${id}`}>Ver Detalle</Link>
-            <img src={img} alt='nombre' /> 
-            <p>{description}</p>
-        </div>
-      
-       
+        <article className="CardItem" onClick={handleClick}>
+            <header className="Header">
+                <h2 className="ItemHeader">
+                    {name}
+                </h2>
+            </header>
+            <picture>
+                <img src={img} alt={name} className="ItemImg"/>
+            </picture>
+            <section>
+                <p className="Info">
+                    Precio: ${price}
+                </p>
+            </section>           
+            <footer className='ItemFooter'>
+                <Link to={`/detail/${id}`} className='Option'>Ver detalle</Link>
+            </footer>
+        </article>
     )
 }
 

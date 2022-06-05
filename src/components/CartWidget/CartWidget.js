@@ -1,12 +1,12 @@
 import './CartWidget.css'
 
 const CartWidget = () => {
-    return (
-        <div className='CartWidget'>
-            <img src="./images/cart.svg" alt="cart" />
-            10
-        </div>
-    )
+    return(
+        <button to='/cart' className="CartWidget">
+            <img src="/images/cart.svg" alt='cart-widget' className='CartImg'/>
+            0
+        </button>
+    );
 }
 
 export default CartWidget
