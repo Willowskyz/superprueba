@@ -11,16 +11,6 @@ const ItemListContainer = ({ greeting }) => {
 
     const { categoryId } = useParams()
 
-    const onResize = () => console.log('cambio de tamaño')
-
-    useEffect(() => {
-        window.addEventListener('resize', onResize)
-    
-        return () => {
-            window.removeEventListener('resize', onResize)
-        }
-    }, [])
-
     useEffect(() => {
         setLoading(true)
 
@@ -48,7 +38,7 @@ const ItemListContainer = ({ greeting }) => {
     }
 
     return(
-        <div className='ItemListContainer' onClick={() => console.log('hice click en itemlistContainer')}>
+        <div className='ItemListContainer'>
             <h1>{ greeting }</h1>
             { 
                 products.length > 0 
@@ -58,5 +48,6 @@ const ItemListContainer = ({ greeting }) => {
         </div>
     )
 }
+
 export default ItemListContainer
 
