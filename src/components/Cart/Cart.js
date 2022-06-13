@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import CartContext from "../../context/CartContext"
 
+
 const Cart = () => {
 
     const { cart, removeItem } = useContext(CartContext)
@@ -21,8 +22,12 @@ const Cart = () => {
                     )})
                 }
             </div>
+                
         </div>
     )
 }
 
+
+
 export default Cart
+
