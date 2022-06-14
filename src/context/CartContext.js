@@ -14,7 +14,7 @@ export const CartContextProvider = ({ children }) => {
                 if(prod.id === productToAdd.id) {
                     const newProduct = {
                         ...prod,
-                        quantity: prod.quantity + productToAdd.quantity
+                        quantity:  productToAdd.quantity
                     }
                     return newProduct
                 } else {
